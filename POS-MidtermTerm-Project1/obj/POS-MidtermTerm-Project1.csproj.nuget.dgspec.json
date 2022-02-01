@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bbice\\source\\repos\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj": {}
+    "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bbice\\source\\repos\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj": {
+    "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbice\\source\\repos\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
+        "projectUniqueName": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
         "projectName": "POS-MidtermTerm-Project1",
-        "projectPath": "C:\\Users\\bbice\\source\\repos\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
+        "projectPath": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
         "packagesPath": "C:\\Users\\bbice\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbice\\source\\repos\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1\\obj\\",
+        "outputPath": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bbice\\AppData\\Roaming\\NuGet\\NuGet.Config",
