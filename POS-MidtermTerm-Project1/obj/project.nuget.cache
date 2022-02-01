@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "X4NwEOpzfM9GH8rnALeyhYY5LTXXn17JCKwezXA2yiRM0/GVKjKUb/AZ1CuHvDkHKgOwcE+5vVPQVXaIq1V0pg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kyle\\Desktop\\DevBuild\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
+=======
+  "dgSpecHash": "KSbpuokffztfHkaUOTW2Wwm6dywQTO++ASu8zgLqITHTbKESsvT3klc99PwGUxLrKaf3Uy/E596+/11bUXNy4A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
+>>>>>>> 07e2a5ece2cead50b5b423bec063ee53830a1419
   "expectedPackageFiles": [],
   "logs": []
 }
