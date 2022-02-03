@@ -22,20 +22,19 @@ namespace POS_MidtermTerm_Project1
             using var fileStream = File.Open(filepath, FileMode.Open);
             using var streamReader = new StreamReader(fileStream);
 
+            List<string> products = new List<string>();
+            List<Product> productList = new List<Product>();
+
             while (!streamReader.EndOfStream)
             {
-                List<string> products = new List<string>();
-
                 products.Add(streamReader.ReadLine());
-
+              
                 foreach (string product in products)
                 {
+                   
                     Console.WriteLine(product);
                 }
-
             }
-
         }
-
     }
 }
