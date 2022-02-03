@@ -20,6 +20,5 @@ namespace POS_MidtermTerm_Project1
 
         }
 
-        public static List<Product>
     }
 }

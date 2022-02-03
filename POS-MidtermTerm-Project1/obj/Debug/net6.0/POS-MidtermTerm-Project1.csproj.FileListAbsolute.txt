@@ -1,0 +1,15 @@
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.csproj.AssemblyReference.cache
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.AssemblyInfoInputs.cache
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.AssemblyInfo.cs
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.csproj.CoreCompileInputs.cache
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\bin\Debug\net6.0\POS-MidtermTerm-Project1.exe
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\bin\Debug\net6.0\POS-MidtermTerm-Project1.deps.json
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\bin\Debug\net6.0\POS-MidtermTerm-Project1.runtimeconfig.json
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\bin\Debug\net6.0\POS-MidtermTerm-Project1.dll
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\bin\Debug\net6.0\ref\POS-MidtermTerm-Project1.dll
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\bin\Debug\net6.0\POS-MidtermTerm-Project1.pdb
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.dll
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\ref\POS-MidtermTerm-Project1.dll
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.pdb
+C:\Users\bbice\source\repos\GC-MidtermProject1\POS-MidtermTerm-Project1\obj\Debug\net6.0\POS-MidtermTerm-Project1.genruntimeconfig.cache

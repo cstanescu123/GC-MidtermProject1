@@ -8,7 +8,7 @@ namespace POS_MidtermTerm_Project1
 {
     abstract class Product
     {
-
+      
     
     }
 
