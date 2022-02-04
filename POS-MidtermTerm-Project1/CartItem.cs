@@ -8,6 +8,8 @@ namespace POS_MidtermTerm_Project1
 {
     internal class CartItem : Warehouse
     {
+        public int productID { get; set; }
+        public char productChar { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public string category { get; set; }
