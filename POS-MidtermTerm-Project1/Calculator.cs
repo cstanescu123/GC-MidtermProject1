@@ -13,10 +13,11 @@ namespace POS_MidtermTerm_Project1
         public double CalculateSubTotal()
         {
             double subTotal = 0;  
+            List<Product> cartMethod = new List<Product>();
             
             //subtotal = item[i] * price * qty in cart
             //foreach loop base on CartIem class/method within class
-            foreach (var cartItem in CartMethod)
+            foreach (var cartItem in cartMethod)
             {
                 //takes price that is associate with item[i], then multiply by qty in cart
                 subTotal = subTotal + subTotal;
@@ -29,12 +30,12 @@ namespace POS_MidtermTerm_Project1
         {           
             double salesTax = 0.06; 
             double grandTotal = subTotal + (subTotal * salesTax);
-            
+            List<Product> cartMethod = new List<Product>();
 
             //itemized list portion of receipt
-            foreach (var cartItem in CartMethod)
+            foreach (var cartItem in cartMethod)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(cartItem);
             }
             
             //financials of receipt            

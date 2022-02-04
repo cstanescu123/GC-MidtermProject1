@@ -47,19 +47,21 @@ namespace POS_MidtermTerm_Project1
             //should we call the cart item function here?
             return userOrder;            
         }
-        public static string AskForPayment()
+        public static string AskForPayment() //method does not work as intended
         {
+            bool userContinue = false;
+            string paymentType;
             string userPaymentMethod;
-            while (true)
-            {
                 Console.WriteLine("How would you like to pay for your awesome items?");
                 Console.WriteLine("Cash, Check, or Credit Card?");                        
-                userPaymentMethod = Console.ReadLine().ToLower().Trim();
+                userPaymentMethod = Console.ReadLine().Trim().ToLower();
+            while (!userContinue)
+            {
             
-                Validator.ValidatePaymentStyle(userPaymentMethod, "Please select a valid payment method.");
-
+                userContinue = Validator.ValidatePaymentStyle(userPaymentMethod, "Please select a valid payment method.", out paymentType);               
+                return userPaymentMethod = paymentType;
             }            
-            return userPaymentMethod; //why is this unreachable
+            return userPaymentMethod; 
         }
         public void ShowReceipt(List<string> receipt)
         {         
@@ -68,7 +70,6 @@ namespace POS_MidtermTerm_Project1
                 Console.WriteLine(item);
             }            
         }
-
 
 
     }

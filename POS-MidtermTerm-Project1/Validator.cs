@@ -8,16 +8,17 @@ namespace POS_MidtermTerm_Project1
 {
     internal class Validator
     {
-        public static bool ValidatePaymentStyle(string paymentMethod,string message)
+        public static bool ValidatePaymentStyle(string paymentMethod,string message, out string paymentType)
         {
            
-            if (paymentMethod != "cash" || paymentMethod != "check" || paymentMethod!= "credit card")
+            if (paymentMethod != "cash" && paymentMethod != "check" && paymentMethod!= "credit card")
             {
-            Console.WriteLine(message);
-                return true;
-            }            
-            return false;
+                Console.WriteLine(message);
+                paymentType = null;
+                return false;
+            }
+            paymentType = paymentMethod;
+            return true;
         }
-
     }
 }
