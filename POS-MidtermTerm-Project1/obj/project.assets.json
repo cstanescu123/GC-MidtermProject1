@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\bbice\\.nuget\\packages\\": {}
+    "C:\\Users\\corne\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
+      "projectUniqueName": "C:\\Users\\corne\\Desktop\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
       "projectName": "POS-MidtermTerm-Project1",
-      "projectPath": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
-      "packagesPath": "C:\\Users\\bbice\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bbice\\source\\repos\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\obj\\",
+      "projectPath": "C:\\Users\\corne\\Desktop\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\POS-MidtermTerm-Project1.csproj",
+      "packagesPath": "C:\\Users\\corne\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\corne\\Desktop\\GC-MidtermProject1\\POS-MidtermTerm-Project1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bbice\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\corne\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
