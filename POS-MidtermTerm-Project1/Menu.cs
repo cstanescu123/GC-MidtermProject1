@@ -17,7 +17,7 @@ namespace POS_MidtermTerm_Project1
             return userName;
         }        
         public static void PresentMenu()
-        {
+        {           
             string dbpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string filepath = dbpath + @"\Products.txt";
             using var fileStream = File.Open(filepath, FileMode.Open);
@@ -41,9 +41,9 @@ namespace POS_MidtermTerm_Project1
         }
         public static List<Product> SelectItems()
         {
-            Console.WriteLine("Please select the food you wish to each");
-            List<Product> userOrder = new List<Product>();
-            //validate user selection (let's make this numberical ordering?)
+            Console.WriteLine("Here is our selection of items");     //these lines will come out of the method in app.cs       
+            Console.WriteLine("What would you like to order?");      //they will lead into this method
+            List<Product> userOrder = new List<Product>();            
             //should we call the cart item function here?
             return userOrder;            
         }
@@ -57,7 +57,6 @@ namespace POS_MidtermTerm_Project1
                 userPaymentMethod = Console.ReadLine().Trim().ToLower();
             while (!userContinue)
             {
-            
                 userContinue = Validator.ValidatePaymentStyle(userPaymentMethod, "Please select a valid payment method.", out paymentType);               
                 return userPaymentMethod = paymentType;
             }            
@@ -69,6 +68,10 @@ namespace POS_MidtermTerm_Project1
             {
                 Console.WriteLine(item);
             }            
+        }
+        public bool OrderAgain(string userContinue)
+        {
+            return true;
         }
 
 
