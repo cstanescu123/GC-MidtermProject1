@@ -61,7 +61,7 @@ namespace POS_MidtermTerm_Project1
                 userContinue = Validator.ValidatePaymentStyle(userPaymentMethod, "Please select a valid payment method.", out paymentType);               
                 return userPaymentMethod = paymentType;
             }            
-            return userPaymentMethod; 
+            return userPaymentMethod;  //this doesn't return as needed
         }
         public void ShowReceipt(List<string> receipt)
         {         
