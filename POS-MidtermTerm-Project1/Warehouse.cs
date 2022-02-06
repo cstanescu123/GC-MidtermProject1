@@ -9,35 +9,23 @@ namespace POS_MidtermTerm_Project1
 {
     public class Warehouse
     {
-        public class WarehouseItem : Product
+
+        public static List<Product> getInventory()
         {
-            public static List<Product> getInventory()
-            {
-                string dbpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string filepath = dbpath + @"\Products.txt";
+            string dbpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string filepath = dbpath + @"\Products.txt";
+            var products = File.ReadAllLines(filepath);
 
-                List<Product> products = File.ReadAllLines(filepath)
-                                             .Skip(1)
-                                             .Select(p => WarehouseItem.FromCsv(p))
-                                             .ToList();
-                return products;
-            }
-            static WarehouseItem FromCsv(string products)
-            {
-                string[] lines = products.Split(',');
-                WarehouseItem item = new WarehouseItem();
-                item.productID = int.Parse(lines[0]);
-                item.name = lines[1];
-                item.description = lines[2];
-                item.category = lines[3];
-                item.price = int.Parse(lines[4]);
-                item.productChar = char.Parse(lines[5]);
-                
-                return item;
-                
-            }
-
-
+            return products.Skip(1).Select(x => parseFile(x))
+                           .ToList();                           
         }
+
+        private static Product parseFile(string input)
+        {
+            var i = input.Split(',');
+            return new Product { ProductID = int.Parse(i[0]),Name= (i[1]), Description=(i[2]), Price=double.Parse(i[3])}
+        }
+
+
     }
 }
