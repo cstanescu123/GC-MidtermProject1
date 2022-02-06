@@ -11,13 +11,6 @@ namespace POS_MidtermTerm_Project1
     {
         public class WarehouseItem : Product
         {
-            int productID;
-            string name;
-            string description;
-            string category;
-            double price;
-            char productChar;
-
             public static List<Product> getInventory()
             {
                 string dbpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -25,10 +18,10 @@ namespace POS_MidtermTerm_Project1
 
                 List<Product> products = File.ReadAllLines(filepath)
                                              .Skip(1)
-                                             .Select(v => WarehouseItem.FromCsv(v))
+                                             .Select(p => WarehouseItem.FromCsv(p))
                                              .ToList();
                 return products;
-
+            }
             static WarehouseItem FromCsv(string products)
             {
                 string[] lines = products.Split(',');
@@ -42,7 +35,6 @@ namespace POS_MidtermTerm_Project1
                 
                 return item;
                 
-
             }
 
 
