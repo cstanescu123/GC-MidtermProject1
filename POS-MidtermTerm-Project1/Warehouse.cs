@@ -9,7 +9,7 @@ namespace POS_MidtermTerm_Project1
 {
     public class Warehouse
     {
-
+        
         public static List<Product> getInventory()
         {
             string dbpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
