@@ -40,8 +40,11 @@ namespace POS_MidtermTerm_Project1
                 item.category = lines[3];
                 item.price = int.Parse(lines[4]);
                 item.productChar = char.Parse(lines[5]);
+
                 return item;
             }
+
+            
 
 
         }
