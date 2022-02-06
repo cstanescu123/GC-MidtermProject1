@@ -10,7 +10,7 @@ namespace POS_MidtermTerm_Project1
     internal class CashRegister
     {
         //to call this method, the user needs to select cash
-        public double GetPaidInCash(double grandTotal)
+        public static double GetPaidInCash(double grandTotal)
         {
             double cashIn = 0; //amount user gave us in cash
             double cashOut = cashIn - grandTotal; 
@@ -23,7 +23,7 @@ namespace POS_MidtermTerm_Project1
         }
 
         //to call this method, the user needs to selec check
-        public void GetPaidByCheck(double grandTotal)
+        public static void GetPaidByCheck(double grandTotal)
         {
             Console.WriteLine("Please provide your three digit check number");
             
@@ -44,7 +44,7 @@ namespace POS_MidtermTerm_Project1
         }
 
         //to select this method, user needs to select credit card
-        public void GetPaidWithCreditCard(double grandTotal)
+        public static void GetPaidWithCreditCard(double grandTotal)
         {
             Regex creditCardPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
             if (!creditCardPattern.IsMatch(Console.ReadLine()))
