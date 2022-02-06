@@ -8,18 +8,10 @@ namespace POS_MidtermTerm_Project1
 {
     public class Product
     {
-        public string name { get; set; }
-        public string category { get; set; }
-        public string description { get; set; }
-        public double price { get; set; }
-
-        //internal Product(string productName, string prodcutDescription, 
-        //                 string productCategory, double productPrice)
-        //{
-        //    name = productName;
-        //    category = productCategory;
-        //    description = prodcutDescription;
-        //    price = productPrice;
-        //}
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+        public double Price { get; set; }
     }    
 }

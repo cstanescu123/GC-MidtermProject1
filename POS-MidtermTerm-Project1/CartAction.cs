@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace POS_MidtermTerm_Project1
 {
-    public class CartAction
+    public class CartAction:CartItem
     {
         public void AddToCart(int id)
         {
-            // Retrieve the product from the warehouse
-            var cartItem = Warehouse.getInventory().SingleOrDefault(
-                c => c.CartId == ShoppingCartId)
-                && c.ProductID == id
+            Cart cart = new Cart();
         }
       
     }

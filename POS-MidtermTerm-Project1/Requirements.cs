@@ -11,7 +11,7 @@ namespace POS_MidtermTerm_Project1
         //REQUIREMENTS\\
 
         //Product/CartItem:
-        ///Class (name, category, description, price)
+        ///Class (productID,name, category, description, price,productChar)
         ///Point to 12 products stored in csv .txt
 
         //Menu:
