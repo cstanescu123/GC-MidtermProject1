@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace POS_MidtermTerm_Project1
 {
-    internal class Cart
+    public class Cart
     {
-
-
+        public Cart()
+        {
+            products = new List<Products>
+        }
     }
 }
