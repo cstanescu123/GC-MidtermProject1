@@ -9,7 +9,6 @@ namespace POS_MidtermTerm_Project1
 {
     internal class CashRegister
     {
-        //to call this method, the user needs to select cash
         public static double GetPaidInCash(double grandTotal)
         {
             double cashIn = 0; //amount user gave us in cash
@@ -21,8 +20,6 @@ namespace POS_MidtermTerm_Project1
             }            
             return Math.Round(cashOut, 2);
         }
-
-        //to call this method, the user needs to selec check
         public static void GetPaidByCheck(double grandTotal)
         {
             Console.WriteLine("Please provide your three digit check number");
@@ -30,37 +27,47 @@ namespace POS_MidtermTerm_Project1
             Regex checkNumberPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
             if (!checkNumberPattern.IsMatch(Console.ReadLine()))
             {
-                Console.WriteLine("Your check number is wrong.");
+                Console.WriteLine("Your check number is wrong. Please try again");
             }
 
             string checkNumber = Console.ReadLine(); //regex check number (verify)
-            double checkAmount = 0; //amount user gave us in cash
+            double checkAmount = 0; //amount user "writes" on the check
            
             if (checkAmount < grandTotal)
             {
                 //request more money (alternate payment method)
             }
-            Console.WriteLine("Thank you paying us exactly what you owe");
+            Console.WriteLine("Thank you paying us exactly what you owe.");
         }
-
-        //to select this method, user needs to select credit card
         public static void GetPaidWithCreditCard(double grandTotal)
         {
-            Regex creditCardPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
-            if (!creditCardPattern.IsMatch(Console.ReadLine()))
+            Console.WriteLine("Please input your card number.");
+            Regex creditCardNumberPattern = new Regex(@"^\b\d{16}\b");
+            if (!creditCardNumberPattern.IsMatch(Console.ReadLine()))
             {
-                Console.WriteLine("This is bad credit card number");
+                Console.WriteLine("This is bad credit card number, please provide us with the correct credit card number.");
             }
 
-            Console.WriteLine("Me asking for the credit card number, exp date, CW");
-            double creditAmount = 0; //amount user gave us in cash
+            Console.WriteLine("What is the experation date of your card? Format must be mm/yy.");
+            Regex creditCardExpDatePattern = new Regex(@"^\b\d{ 2}/\d{ 2}\b");
+            if (!creditCardExpDatePattern.IsMatch(Console.ReadLine()))
+            {
+                Console.WriteLine("You did not input the experation date. The format is mm/yy.");
+            }
 
+            Console.WriteLine("Please enter the three digit CW code on the back of your card.");
+            Regex creditCardCWPattern = new Regex(@"^\b\d{ 3}\b");
+            if (!creditCardCWPattern.IsMatch(Console.ReadLine()))
+            {
+                Console.WriteLine("You did not input the experation date. The format is mm/yy.");
+            }
+
+            double creditAmount = 0; //dollar amount user is paying
             if (creditAmount < grandTotal)
             {
                 //request more money (alternate payment method)
             }
-
-            Console.WriteLine("Thank you paying us exactly what you owe");
+            Console.WriteLine("Thank you paying us exactly what you owe.");
         }
     }
 }
