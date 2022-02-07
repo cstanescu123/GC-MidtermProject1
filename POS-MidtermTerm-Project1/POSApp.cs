@@ -13,9 +13,9 @@ namespace POS_MidtermTerm_Project1
             bool anotherOrder = true;
             while (anotherOrder)
             {            
-                string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");                        
+                string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");
                 //Menu.SelectItems("Here is our amazing list of items!", "What would you like to order?");
-
+                
                 //Display items in cart
                 //Verify cart is correct
                 //Show price (subtotal, tax, grand total)

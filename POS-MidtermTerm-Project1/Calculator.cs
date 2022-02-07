@@ -8,8 +8,6 @@ namespace POS_MidtermTerm_Project1
 {
     internal class Calculator
     {
-
-
         public double CalculateSubTotal()
         {
             double subTotal = 0;  
@@ -22,10 +20,8 @@ namespace POS_MidtermTerm_Project1
                 //takes price that is associate with item[i], then multiply by qty in cart
                 subTotal = subTotal + subTotal;
             }
-
             return subTotal;
         }
-
         public void CalculateReceipt(double subTotal)
         {           
             double salesTax = 0.06; 
@@ -36,8 +32,7 @@ namespace POS_MidtermTerm_Project1
             foreach (var cartItem in cartMethod)
             {
                 Console.WriteLine(cartItem);
-            }
-            
+            }   
             //financials of receipt            
             Console.WriteLine(subTotal);
             Console.WriteLine(salesTax);
