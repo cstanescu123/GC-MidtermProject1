@@ -22,7 +22,7 @@ namespace POS_MidtermTerm_Project1
             }
             return subTotal;
         }
-        public void CalculateReceipt(double subTotal)
+        public static void CalculateReceipt(double subTotal)
         {           
             double salesTax = 0.06; 
             double grandTotal = subTotal + (subTotal * salesTax);

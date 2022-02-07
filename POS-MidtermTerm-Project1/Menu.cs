@@ -27,22 +27,23 @@ namespace POS_MidtermTerm_Project1
         }
         public static string AskForPayment(string howToPay)
         {
-            //  bool paymentStyle = true;
+            //bool paymentStyle = true;
             string userPaymentMethod;
-            // while (paymentStyle)
-            {
+            //while (paymentStyle)
+            //{
                 Console.WriteLine($"{howToPay} Cash, Check, or Credit Card?");
                 userPaymentMethod = Console.ReadLine().Trim().ToLower();
                 if (userPaymentMethod != "cash" && userPaymentMethod != "check" && userPaymentMethod != "credit card")
-                {
-                    //       paymentStyle = true;
+                {   
                     return "";
                 }
-                //   paymentStyle = false;
-                return userPaymentMethod;
-            }
+                else
+                {
+                    return userPaymentMethod;
+                }
+            //}
         }
-        public static void ShowReceipt(List<string> cartItems)
+        public static void ShowCartItems(List<string> cartItems)
         {
             foreach (var item in cartItems)
             {
