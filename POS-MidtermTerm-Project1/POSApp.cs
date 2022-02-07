@@ -14,7 +14,7 @@ namespace POS_MidtermTerm_Project1
             while (anotherOrder)
             {            
                 string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");                        
-                Menu.SelectItems("Here is our amazing list of items!", "What would you like to order?");
+                //Menu.SelectItems("Here is our amazing list of items!", "What would you like to order?");
 
                 //Display items in cart
                 //Verify cart is correct
@@ -42,7 +42,10 @@ namespace POS_MidtermTerm_Project1
                 {
                     anotherOrder = true;
                 }
-                anotherOrder = false;
+                else
+                {
+                   anotherOrder = false;
+                }
             }
             Console.WriteLine("Thank you for ordering with us, have a wonderful day!");
         }

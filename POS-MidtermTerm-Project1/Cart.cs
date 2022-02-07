@@ -10,7 +10,7 @@ namespace POS_MidtermTerm_Project1
     {
         public Cart()
         {
-            products = new List<Products>
+            //products = new List<Products>
         }
     }
 }
