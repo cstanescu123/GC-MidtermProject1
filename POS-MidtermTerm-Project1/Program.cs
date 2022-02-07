@@ -3,5 +3,7 @@
 //Menu.Welcome();
 //Menu.PresentMenu();
 
-Menu.AskForPayment();
+//Menu.AskForPayment();
+
+POSApp.Run();
 

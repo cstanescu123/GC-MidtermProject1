@@ -23,7 +23,7 @@ namespace POS_MidtermTerm_Project1
         private static Product parseFile(string input)
         {
             var i = input.Split(',');
-            return new Product { ProductID = int.Parse(i[0]),Name= (i[1]), Description=(i[2]), Price=double.Parse(i[3])}
+            return new Product { ProductID = int.Parse(i[0]), Name = (i[1]), Description = (i[2]), Price = double.Parse(i[3]) };
         }
 
 
