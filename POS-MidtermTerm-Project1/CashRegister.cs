@@ -13,11 +13,7 @@ namespace POS_MidtermTerm_Project1
         {
             double cashIn = 0; //amount user gave us in cash
             double cashOut = cashIn - grandTotal; 
-            
-            if (cashIn < grandTotal)
-            {
-                //request more money (alternate payment method)
-            }            
+          
             return Math.Round(cashOut, 2);
         }
         public static void GetPaidByCheck(double grandTotal)
@@ -30,13 +26,6 @@ namespace POS_MidtermTerm_Project1
                 Console.WriteLine("Your check number is wrong. Please try again");
             }
 
-            string checkNumber = Console.ReadLine(); //regex check number (verify)
-            double checkAmount = 0; //amount user "writes" on the check
-           
-            if (checkAmount < grandTotal)
-            {
-                //request more money (alternate payment method)
-            }
             Console.WriteLine("Thank you paying us exactly what you owe.");
         }
         public static void GetPaidWithCreditCard(double grandTotal)
@@ -62,11 +51,6 @@ namespace POS_MidtermTerm_Project1
                 Console.WriteLine("You did not input the experation date. The format is mm/yy.");
             }
 
-            double creditAmount = 0; //dollar amount user is paying
-            if (creditAmount < grandTotal)
-            {
-                //request more money (alternate payment method)
-            }
             Console.WriteLine("Thank you paying us exactly what you owe.");
         }
     }

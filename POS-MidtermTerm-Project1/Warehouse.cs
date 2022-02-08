@@ -16,7 +16,7 @@ namespace POS_MidtermTerm_Project1
             string filepath = dbpath + @"\Products.txt";
             var products = File.ReadAllLines(filepath);
 
-            return products.Skip(1).Select(x => parseFile(x))
+            return products.Select(x => parseFile(x))
                            .ToList();                           
         }
         private static Product parseFile(string input)
