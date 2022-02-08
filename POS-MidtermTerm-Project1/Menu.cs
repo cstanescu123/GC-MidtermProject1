@@ -29,9 +29,9 @@ namespace POS_MidtermTerm_Project1
             Console.WriteLine("");
             return inventory;
         }
-        public static List<Product> SelectItemsForCart(Product product, string message)
+        public static List<CartItem> SelectItemsForCart(Product product, string message)
         {
-            var cart = new List<Product>();
+            var cart = new List<CartItem>();
             Console.WriteLine(message); //asking user to select items based on xx (numbers)
             bool anotherOrder = true;
             while (anotherOrder)
@@ -43,7 +43,12 @@ namespace POS_MidtermTerm_Project1
                 }
                 if (number == product.ProductID)
                 {
-                    cart.Add(product);
+                    var cartItem = new CartItem();
+                    Console.WriteLine("How many?");
+                    cartItem.Quantity = int.Parse(Console.ReadLine());
+                    cartItem.Product = product;
+
+                    cart.Add(cartItem);
                 }
                 else
                 {
@@ -64,16 +69,7 @@ namespace POS_MidtermTerm_Project1
             }
              return cart;
         }
-        public static List<CartItem> ShowCartItems(List<Product> userSelection)
-        {
-            var cart = new List<CartItem>();
-            foreach (var product in userSelection)
-            {
-                cart.Add(product);
-                Console.WriteLine($"{product.Name} ${product.Price}"); //add cart qty
-            }
-            return cart;
-        }
+
         public static string AskForPayment(string howToPay)
         {
             string userPaymentMethod;
