@@ -14,17 +14,13 @@ namespace POS_MidtermTerm_Project1
             while (anotherOrder)
             {            
                 string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");
-                //Menu.SelectItems("Here is our amazing list of items!", "What would you like to order?");
-
-                List<string> cartItemList = new List<string>();    
-                Menu.ShowCartItems(cartItemList);
+                Menu.ShowMenu("Here is our amazing list of items!");
 
                 //Verify cart is correct
-
+                Console.ReadLine(); //to creat a break
                 Calc calc = new Calc(4.99, 2);
                 Calculator.CalculateReceipt(calc.GetSubTotal()); //this is to show subtotal per item or for the whole cart?
-                
-                        
+                                      
                 string paymentType = Menu.AskForPayment("How would you like to pay for your awesome items?");
                 if (paymentType == "cash")
                 {                
@@ -41,7 +37,7 @@ namespace POS_MidtermTerm_Project1
                 }    
                 
                 var cartItems = new List<string>();
-                Menu.ShowCartItems(cartItems); //this will ouput the final receipt once payment has occured
+               // Menu.ShowCartItems(); //this will ouput the final receipt once payment has occured
 
                 Console.WriteLine("Would you like to place another order?");
                 string orderAgain = Console.ReadLine().Trim().ToLower();
