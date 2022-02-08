@@ -15,6 +15,14 @@ namespace POS_MidtermTerm_Project1
             {            
                 string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");
                 Menu.ShowMenu("Here is our amazing list of items!");
+                Product product = new Product();
+                product.ProductID = 15;
+                product.Name = "test";
+                product.Description = "test";
+                product.Category = "test";
+                product.Price = 4;
+                var beer = new Product();
+                Menu.SelectItemsForCart(beer, "test");
 
                 //Verify cart is correct
                 Console.ReadLine(); //to creat a break

@@ -41,14 +41,14 @@ namespace POS_MidtermTerm_Project1
             Regex creditCardExpDatePattern = new Regex(@"^\b\d{ 2}/\d{ 2}\b");
             if (!creditCardExpDatePattern.IsMatch(Console.ReadLine()))
             {
-                Console.WriteLine("You did not input the experation date. The format is mm/yy.");
+                Console.WriteLine("You did not input the expiration date. The format is mm/yy.");
             }
 
             Console.WriteLine("Please enter the three digit CW code on the back of your card.");
             Regex creditCardCWPattern = new Regex(@"^\b\d{ 3}\b");
             if (!creditCardCWPattern.IsMatch(Console.ReadLine()))
             {
-                Console.WriteLine("You did not input the experation date. The format is mm/yy.");
+                Console.WriteLine("You did not input the expiration date. The format is mm/yy.");
             }
 
             Console.WriteLine("Thank you paying us exactly what you owe.");
