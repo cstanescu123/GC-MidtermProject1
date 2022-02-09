@@ -13,7 +13,7 @@ namespace POS_MidtermTerm_Project1
 
 
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.BackgroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.Clear();
 
 
