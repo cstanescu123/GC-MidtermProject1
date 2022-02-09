@@ -29,6 +29,7 @@ namespace POS_MidtermTerm_Project1
             Console.WriteLine("");
             return inventory;
         }
+
         public static List<CartItem> SelectItemsForCart(Product product, string message)
         {
             var cart = new List<CartItem>();
@@ -36,11 +37,7 @@ namespace POS_MidtermTerm_Project1
             bool anotherOrder = true;
             while (anotherOrder)
             {
-                int number;
-                int.TryParse(Console.ReadLine(), out number); //verify correct, i don't think so
-                {
-                    Console.WriteLine("Please select your item by entering 2 digits. So for item 1, you would input 01.");
-                }
+                int number = int.Parse(Console.ReadLine());
                 if (number == product.ProductID)
                 {
                     var cartItem = new CartItem();
@@ -67,7 +64,7 @@ namespace POS_MidtermTerm_Project1
                     Console.WriteLine("");
                 }
             }
-             return cart;
+            return cart;
         }
 
         public static string AskForPayment(string howToPay)

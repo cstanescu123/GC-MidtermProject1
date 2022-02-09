@@ -12,18 +12,20 @@ namespace POS_MidtermTerm_Project1
         {
             bool anotherOrder = true;
             while (anotherOrder)
-            {            
+            {   
+                List<CartItem> cart = new List<CartItem>();
                 string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");
                 Menu.ShowMenu("Here is our amazing list of items!");
-                Product product = new Product();
-                product.ProductID = 15;
-                product.Name = "test";
-                product.Description = "test";
-                product.Category = "test";
-                product.Price = 4;
-                var beer = new Product();
-                Menu.SelectItemsForCart(beer, "test");
+                List<Product> product = new List<Product>();
+                Warehouse.getInventory();
 
+                string message = "";
+                Console.WriteLine("Please select your item by entering 2 digits. So for item 1, you would input 01.");
+                foreach (product product in product)
+                {
+
+                }
+                Menu.SelectItemsForCart(product, message);
                 //Verify cart is correct
                 Console.ReadLine(); //to creat a break
                 Calc calc = new Calc(4.99, 2);
