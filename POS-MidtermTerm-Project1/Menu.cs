@@ -21,76 +21,47 @@ namespace POS_MidtermTerm_Project1
         {
             Console.WriteLine(message);
             Console.WriteLine("");
-            List<Product> inventory = Warehouse.getInventory();
-            foreach (var product in inventory)
+            List<Product> products = Warehouse.getInventory();
+            foreach (var product in products)
             {
                 Console.WriteLine($"[{product.ProductID}] {product.Name} {product.Description} {product.Category} ${product.Price}");
             }
             Console.WriteLine("");
-            return inventory;
+            return products;
         }
 
-        public static List<CartItem> SelectItemsForCart(Product product, string message)
+        public static List<CartItem> SelectItemsForCart(List<Product> products, string message)
         {
             var cart = new List<CartItem>();
             Console.WriteLine(message); //asking user to select items based on xx (numbers)
-            bool anotherOrder = true;
-            while (anotherOrder)
-            {
-                int number = int.Parse(Console.ReadLine());
-                if (number == product.ProductID)
-                {
-                    var cartItem = new CartItem();
-                    Console.WriteLine("How many?");
-                    cartItem.Quantity = int.Parse(Console.ReadLine());
-                    cartItem.Product = product;
-
-                    cart.Add(cartItem);
-                }
-                else
-                {
-                    Console.WriteLine("That product does not exist in our amazing inventory");
-                }
-                Console.WriteLine("Would you like to order something else? (yes/no)");
-                string orderAgain = Console.ReadLine().Trim().ToLower();
-                if (orderAgain == "yes")
-                {
-                    anotherOrder = true;
-                    Console.WriteLine("");
-                }
-                else
-                {
-                    anotherOrder = false;
-                    Console.WriteLine("");
-                }
-            }
+            var cartItem = new CartItem(); //this will store the order
+              int number = int.Parse(Console.ReadLine()); //this takes in our 2 digit code               
+              if (!products.Any(x => x.ProductID == number))
+              {
+                  Console.WriteLine("That product does not exist in our amazing inventory");
+              }
+              else
+              {
+                  cartItem.Product = CartAction.GetProductByProductId(number);
+                  Console.WriteLine($"How many {cartItem.Product.Name}s would you like?");
+                  cartItem.Quantity = int.Parse(Console.ReadLine()); //user give qty
+                  cart.Add(cartItem);
+              }             
             return cart;
         }
-
         public static string AskForPayment(string howToPay)
         {
             string userPaymentMethod;
-                Console.WriteLine($"{howToPay} Cash, Check, or Credit Card?");
-                userPaymentMethod = Console.ReadLine().Trim().ToLower();
-                if (userPaymentMethod != "cash" && userPaymentMethod != "check" && userPaymentMethod != "credit card")
+            Console.WriteLine($"{howToPay} Cash, Check, or Credit Card?");
+            userPaymentMethod = Console.ReadLine().Trim().ToLower();
+            if (userPaymentMethod != "cash" && userPaymentMethod != "check" && userPaymentMethod != "credit card")
                 {   
                     return "";
                 }
-                else
+            else
                 {
                     return userPaymentMethod;
                 }
         }
-        //    List<string> products = new List<string>();
-
-        //    while (!streamReader.EndOfStream)
-        //    {
-        //        products.Add(streamReader.ReadLine());
-
-        //        foreach (string product in products)
-        //        {
-
-        //            Console.WriteLine(product);
-        //        }
     }
 }

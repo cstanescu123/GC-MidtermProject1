@@ -21,8 +21,8 @@ namespace POS_MidtermTerm_Project1
         }
         private static Product parseFile(string input)
         {
-            var i = input.Split(',');
-            return new Product { ProductID = int.Parse(i[0]), Name = (i[1]), Description = (i[2]), Category = (i[3]), Price = double.Parse(i[4]) };
+            var i = input.Trim().Split(',');
+            return new Product { ProductID = int.Parse(i[0]), Name = (i[1]).Trim(), Description = (i[2]).Trim(), Category = (i[3]).Trim(), Price = double.Parse(i[4]) };
         }
 
 

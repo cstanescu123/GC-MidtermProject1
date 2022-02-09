@@ -8,7 +8,8 @@ namespace POS_MidtermTerm_Project1
 {
     public class CartItem
     {
-        public decimal Quantity { get; set; }
+        public double Quantity { get; set; }
         public Product Product { get; set; }
+        public string ProductName { get; set; }
     }
 }
