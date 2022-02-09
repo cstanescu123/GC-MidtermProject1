@@ -25,9 +25,6 @@ namespace POS_MidtermTerm_Project1
             return new Product { ProductID = int.Parse(i[0]), Name = (i[1]), Description = (i[2]), Category = (i[3]), Price = double.Parse(i[4]) };
         }
 
-        public static Product getProductById(string id)
-        {
-            return getInventory().Where((x => x.product == id).FirstorDefault());
-        }
+
     }
 }
