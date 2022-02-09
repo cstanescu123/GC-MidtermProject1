@@ -21,20 +21,22 @@ namespace POS_MidtermTerm_Project1
             Quantity = quantity;
         }
 
-        public double GetSubTotal()
+        public static double GetSubTotal(List<CartItem> cartItems)
         {
-            return Price * Quantity;
+            double subtotal = 0;
+            foreach (var item in cartItems)
+            {
+                subtotal = (item.Quantity) * (item.Product.Price) + subtotal;
+            }
+            return subtotal;
         }
-        public double GetTax()
+        public static double GetTax(List<CartItem> cartItems)
         {
-            return GetSubTotal() * .06;
+            return GetSubTotal(cartItems) * .06;
         }
-        public double GetGrandTotal()
-        {
-            return GetSubTotal() + GetTax();
+        public static double GetGrandTotal(List<CartItem> cartItems)
+        {        
+            return  Math.Round((GetSubTotal(cartItems) + GetTax(cartItems)), 2);
         }
-
-
-
     }
 }

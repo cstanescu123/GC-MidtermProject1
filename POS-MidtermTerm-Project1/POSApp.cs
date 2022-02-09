@@ -10,44 +10,39 @@ namespace POS_MidtermTerm_Project1
     {
         public static void Run()
         {
+
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
+            Console.Clear();
+
+
+            string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");
             bool anotherOrder = true;
             while (anotherOrder)
             {   
                 List<CartItem> cart = new List<CartItem>();
-                string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please tell me your name: ");
-                Menu.ShowMenu("Here is our amazing list of items!");
-                List<Product> product = new List<Product>();
-                Warehouse.getInventory();
-
-                string message = "";
-                Console.WriteLine("Please select your item by entering 2 digits. So for item 1, you would input 01.");
-                foreach (product product in product)
-                {
-
-                }
-                Menu.SelectItemsForCart(product, message);
-                //Verify cart is correct
-                Console.ReadLine(); //to creat a break
-                Calc calc = new Calc(4.99, 2);
-                Calculator.CalculateReceipt(calc.GetSubTotal()); //this is to show subtotal per item or for the whole cart?
-                                      
+                var userCart = Menu.SelectItemsForCart(Menu.ShowMenu("Here is our amazing list of items!"), "Please enter the 2 digit code for your order.");
+                Console.WriteLine($"Your subtotal is ${Calc.GetSubTotal(userCart)}");
+                Console.WriteLine($"Tax is ${Calc.GetTax(userCart)}");
+                Console.WriteLine($"Your grandtotal is ${Calc.GetGrandTotal(userCart)}");                
+                
                 string paymentType = Menu.AskForPayment("How would you like to pay for your awesome items?");
                 if (paymentType == "cash")
                 {                
-                    double cashOwed = CashRegister.GetPaidInCash(25.55);                                
+                    double cashOwed = CashRegister.GetPaidInCash(Calc.GetGrandTotal(userCart));                                
                     if (cashOwed != 0) Console.WriteLine($"Here is your change {cashOwed - 0}.");
                 }
                 else if (paymentType == "check")
                 {
-                    CashRegister.GetPaidByCheck(25.66);
+                    CashRegister.GetPaidByCheck(Calc.GetGrandTotal(userCart));
                 }
                 else
                 {
-                    CashRegister.GetPaidWithCreditCard(25.66);
-                }    
-                
-                var cartItems = new List<string>();
-               // Menu.ShowCartItems(); //this will ouput the final receipt once payment has occured
+                    CashRegister.GetPaidWithCreditCard(Calc.GetGrandTotal(userCart));
+                }
+
+                Menu.ShowReceipt(userCart);
 
                 Console.WriteLine("Would you like to place another order?");
                 string orderAgain = Console.ReadLine().Trim().ToLower();
