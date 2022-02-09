@@ -47,7 +47,18 @@ namespace POS_MidtermTerm_Project1
                   cartItem.Quantity = int.Parse(Console.ReadLine()); //user give qty
                   cart.Add(cartItem);
               }             
-            return cart;
+            return cart;            
+        }
+        public static void ShowReceipt(List<CartItem> userCart)
+        {
+
+            foreach (var item in userCart)
+            {
+                Console.WriteLine($"{item.Product.Name}  {item.Product.Price} {item.Quantity}");
+                Console.WriteLine($"Your subtotal is ${Calc.GetSubTotal(userCart)}");
+                Console.WriteLine($"Tax is ${Calc.GetTax(userCart)}");
+                Console.WriteLine($"Your grandtotal is ${Calc.GetGrandTotal(userCart)}");
+            }
         }
         public static string AskForPayment(string howToPay)
         {
