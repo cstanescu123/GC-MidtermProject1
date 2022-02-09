@@ -43,7 +43,7 @@ namespace POS_MidtermTerm_Project1
               else
               {
                   cartItem.Product = CartAction.GetProductByProductId(number);
-                  Console.WriteLine($"How many {cartItem.Product.Name}s would you like?");
+                  Console.WriteLine($"How many {cartItem.Product.Name.Trim()}s would you like?");
                   cartItem.Quantity = int.Parse(Console.ReadLine()); //user give qty
                   cart.Add(cartItem);
               }             
