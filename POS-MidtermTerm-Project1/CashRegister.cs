@@ -8,25 +8,30 @@ using System.Threading.Tasks;
 namespace POS_MidtermTerm_Project1
 {
     internal class CashRegister
-    {
+    {        
         public static double GetPaidInCash(double grandTotal)
         {
-            double cashIn = 0; //amount user gave us in cash
-            double cashOut = cashIn - grandTotal; 
-          
+            Console.WriteLine("Ask for money in cash");
+            double cashIn = double.Parse(Console.ReadLine());
+            double cashOut = cashIn - grandTotal;          
             return Math.Round(cashOut, 2);
         }
         public static void GetPaidByCheck(double grandTotal)
         {
             Console.WriteLine("Please provide your three digit check number");
-            
-            Regex checkNumberPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
-            if (!checkNumberPattern.IsMatch(Console.ReadLine()))
-            {
-                Console.WriteLine("Your check number is wrong. Please try again");
-            }
 
-            Console.WriteLine("Thank you paying us exactly what you owe.");
+            bool correctREGEX = true;
+            while (correctREGEX)
+            {
+                Regex checkNumberPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
+                if (checkNumberPattern.IsMatch(Console.ReadLine()))
+                {
+                    Console.WriteLine("Your check number is wrong. Please try again");
+                    correctREGEX = true;
+                }
+                    correctREGEX = false; 
+                //this doesn't work as intented, never repeats if wrong
+            }
         }
         public static void GetPaidWithCreditCard(double grandTotal)
         {
@@ -48,9 +53,8 @@ namespace POS_MidtermTerm_Project1
             Regex creditCardCWPattern = new Regex(@"^\b\d{ 3}\b");
             if (!creditCardCWPattern.IsMatch(Console.ReadLine()))
             {
-                Console.WriteLine("You did not input the expiration date. The format is mm/yy.");
+                Console.WriteLine("You did not input the proper CW code on the back of your card.");
             }
-
             Console.WriteLine("Thank you paying us exactly what you owe.");
         }
     }
