@@ -74,6 +74,7 @@ namespace POS_MidtermTerm_Project1
             }
             Console.WriteLine($"Your Subtotal is ${Calc.GetSubTotal(userCart)}");
             Console.WriteLine($"Tax is ${Calc.GetTax(userCart)}");
+            Console.WriteLine($"Your Grand Total is ${Calc.GetGrandTotal(userCart)}\n");
         }
         public static string AskForPayment(string howToPay)
         {
