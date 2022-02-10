@@ -12,7 +12,6 @@ namespace POS_MidtermTerm_Project1
         
         public static void PaymentType(List<CartItem> userCart, string paymentStyle) 
         {
-        
             if (paymentStyle == "cash")
                 {                
                     double cashOwed = CashRegister.GetPaidInCash(Calc.GetGrandTotal(userCart));                                
@@ -27,6 +26,5 @@ namespace POS_MidtermTerm_Project1
                     CashRegister.GetPaidWithCreditCard(Calc.GetGrandTotal(userCart));
                 }
         }
-
     }
 }

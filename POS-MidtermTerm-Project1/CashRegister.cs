@@ -24,18 +24,10 @@ namespace POS_MidtermTerm_Project1
         public static void GetPaidByCheck(double grandTotal)
         {
             Console.WriteLine("Please provide your three digit check number");
-
-            bool correctREGEX = true;
-            while (correctREGEX)
+            Regex checkNumberPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
+            while (!checkNumberPattern.IsMatch(Console.ReadLine()))
             {
-                Regex checkNumberPattern = new Regex(@"^\b([0-9][0-9][1-9])\b");
-                if (checkNumberPattern.IsMatch(Console.ReadLine()))
-                {
-                    Console.WriteLine("Your check number is wrong. Please try again");
-                    correctREGEX = true;
-                }
-                    correctREGEX = false; 
-                //this doesn't work as intented, never repeats if wrong
+                Console.WriteLine("Your check number is wrong. Please try again");
             }
         }
         public static void GetPaidWithCreditCard(double grandTotal)
@@ -46,7 +38,6 @@ namespace POS_MidtermTerm_Project1
             {
                 Console.WriteLine("This is bad credit card number, please provide us with the correct credit card number.");
             }
-            
 
             Console.WriteLine("What is the expiration date of your card? Format must be mm/yy.");
             Regex creditCardExpDatePattern = new Regex(@"^\b\d{2}/\d{2}\b");
