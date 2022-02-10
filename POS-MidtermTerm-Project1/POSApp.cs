@@ -11,18 +11,18 @@ namespace POS_MidtermTerm_Project1
         public static void Run()
         {
 
-
+            Console.SetWindowSize(82, 40);
+            Console.Title = "THE BURGER HUT II - Point of Sale Application";
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.Clear();
 
-
-            string userName = Menu.Welcome("Hello! Welcome the greatest cafe ever!", "Please enter the name for your Order: ");
+            string userName = Menu.Welcome("Hello! Welcome to the Burger Hut II: Where our Menu starts at 10!\n", "Please enter the name for your Order: ");
             bool anotherOrder = true;
             while (anotherOrder)
             {   
                 List<CartItem> cart = new List<CartItem>();
-                var userCart = Menu.SelectItemsForCart(Menu.ShowMenu("Here is our amazing list of items!"), "Please enter the number corresponding to your food item!");
+                var userCart = Menu.SelectItemsForCart(Menu.ShowMenu("Here is our amazing list of delicious items!"), "Please enter the number corresponding to your food item!");
                 Console.WriteLine($"   Subtotal: ${Calc.GetSubTotal(userCart)}");
                 Console.WriteLine($"        Tax: ${Calc.GetTax(userCart)}");
                 Console.WriteLine($"Grand Total: ${Calc.GetGrandTotal(userCart)}");                
@@ -42,7 +42,7 @@ namespace POS_MidtermTerm_Project1
                     CashRegister.GetPaidWithCreditCard(Calc.GetGrandTotal(userCart));
                 }
 
-                Menu.ShowReceipt(userCart);
+                Menu.ShowReceipt(userCart, paymentType);
 
                 Console.WriteLine("Would you like to place another order?");
                 string orderAgain = Console.ReadLine().Trim().ToLower();
@@ -54,6 +54,7 @@ namespace POS_MidtermTerm_Project1
                 {
                    anotherOrder = false;
                 }
+               
             }
             Console.WriteLine("Thank you for ordering with us, have a wonderful day!");
         }

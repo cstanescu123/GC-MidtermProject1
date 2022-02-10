@@ -24,7 +24,7 @@ namespace POS_MidtermTerm_Project1
             List<Product> products = Warehouse.getInventory();
             foreach (var product in products)
             {
-                Console.WriteLine($"[{product.ProductID}] {product.Name} {product.Description} {product.Category} ${product.Price}");
+                Console.WriteLine($" [{product.ProductID}] {product.Name} {product.Description} {product.Category} ${product.Price}");
             }
             Console.WriteLine("");
             return products;
@@ -56,7 +56,7 @@ namespace POS_MidtermTerm_Project1
             return cart;
 
         }
-        public static void ShowReceipt(List<CartItem> userCart)
+        public static void ShowReceipt(List<CartItem> userCart, string paymentType)
         {
             Console.WriteLine("You Ordered:\n");
             foreach (var item in userCart)
@@ -64,9 +64,11 @@ namespace POS_MidtermTerm_Project1
                 Console.WriteLine($"{item.Product.Name} ${item.Product.Price} x {item.Quantity}\n");
 
             }
-            Console.WriteLine($"Your subtotal is ${Calc.GetSubTotal(userCart)}");
+            Console.WriteLine($"Your Subtotal is ${Calc.GetSubTotal(userCart)}");
             Console.WriteLine($"Tax is ${Calc.GetTax(userCart)}");
-            Console.WriteLine($"Your grandtotal is ${Calc.GetGrandTotal(userCart)}\n");
+            Console.WriteLine($"Your Grand Total is ${Calc.GetGrandTotal(userCart)}\n");
+            Console.WriteLine($"You Paid with {paymentType.ToUpper()}\n");
+            Console.Beep();
         }
         public static string AskForPayment(string howToPay)
         {
