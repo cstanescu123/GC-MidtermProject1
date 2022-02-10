@@ -32,11 +32,11 @@ namespace POS_MidtermTerm_Project1
         }
         public static double GetTax(List<CartItem> cartItems)
         {
-            return GetSubTotal(cartItems) * .06;
+            return Math.Round(GetSubTotal(cartItems) * .06, 2);
         }
         public static double GetGrandTotal(List<CartItem> cartItems)
         {        
-            return  Math.Round((GetSubTotal(cartItems) + GetTax(cartItems)), 2);
+            return  Math.Round(GetSubTotal(cartItems) + GetTax(cartItems), 2);
         }
     }
 }
